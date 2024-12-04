@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Transaction Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Transaction Tracker</h1>
+
+    <div class="form">
+      <input type="text" id="productName" placeholder="Product Name">
+      <input type="number" id="amount" placeholder="Amount">
+      <label>
+        <input type="checkbox" id="splitBill"> Split Bill
+      </label>
+      <div class="date-selection">
+        <label>
+          <input type="radio" name="dateOption" id="todayDate" checked> Use Today's Date
+        </label>
+        <label>
+          <input type="radio" name="dateOption" id="customDate"> Select Date
+        </label>
+        <input type="date" id="transactionDate" disabled>
+      </div>
+      <button id="addTransaction">Add Transaction</button>
+    </div>
+
+    <div class="preset-buttons">
+      <button onclick="addPresetTransaction('Milk', 50)">Add Milk</button>
+      <button onclick="addPresetTransaction('Electricity Bill', 200)">Add Electricity</button>
+      <button onclick="addPresetTransaction('Groceries', 150)">Add Groceries</button>
+    </div>
+
+    <div class="transactions">
+      <h2>Transactions</h2>
+      <ul id="transactionList"></ul>
+      <div class="total">
+        <strong>Total Amount: </strong><span id="totalAmount">0</span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
