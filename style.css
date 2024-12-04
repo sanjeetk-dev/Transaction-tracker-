@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input, .form label {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #218838;
+}
+
+.date-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.date-selection input[type="date"] {
+  margin-left: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.preset-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.preset-buttons button {
+  flex: 1;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.preset-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.transactions {
+  margin-top: 20px;
+}
+
+.transactions h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#transactionList {
+  list-style-type: none;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.transaction div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.transaction button:hover {
+  background-color: #c82333;
+}
+
+.total {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .form input, .form label {
+    font-size: 14px;
+  }
+
+  .form button, .preset-buttons button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .form {
+    gap: 5px;
+  }
+
+  .form input, .form label, .date-selection {
+    font-size: 12px;
+  }
+
+  .form button, .preset-buttons button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .transaction div {
+    font-size: 12px;
+  }
+
+  .total {
+    font-size: 16px;
+  }
+    }
