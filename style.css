@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   background: #fff;
   padding: 20px;
@@ -23,6 +23,15 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: #333;
+}
+
+/* Summary */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 18px;
   color: #333;
 }
 
@@ -46,26 +55,6 @@ h1 {
   border-radius: 4px;
 }
 
-.split-group label {
-  font-size: 14px;
-}
-
-.date-selection {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.date-selection input[type="date"] {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.hidden {
-  display: none;
-}
-
 button {
   padding: 10px 20px;
   background-color: #28a745;
@@ -80,31 +69,20 @@ button:hover {
   background-color: #218838;
 }
 
-/* Preset Buttons */
-.preset-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.filters {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.preset-buttons button {
-  flex: 1;
-  background-color: #007bff;
-}
-
-.preset-buttons button:hover {
-  background-color: #0056b3;
+.filters input.hidden {
+  display: none;
 }
 
 /* Transactions */
-.transactions {
-  margin-top: 20px;
-}
-
 .transactions h2 {
   margin-bottom: 10px;
-  color: #333;
 }
 
 #transactionList {
@@ -129,22 +107,15 @@ button:hover {
 }
 
 .transaction button {
-  background-color: #dc3545;
-  color: #fff;
+  background: none;
   border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
+  color: #dc3545;
+  font-size: 20px;
   cursor: pointer;
 }
 
 .transaction button:hover {
-  background-color: #c82333;
-}
-
-.total {
-  text-align: right;
-  margin-top: 10px;
-  font-size: 18px;
+  color: #c82333;
 }
 
 /* Responsive Design */
@@ -153,16 +124,12 @@ button:hover {
     padding: 15px;
   }
 
-  .input-group {
+  .summary {
     flex-direction: column;
     gap: 10px;
   }
 
   button {
     font-size: 14px;
-  }
-
-  .total {
-    font-size: 16px;
   }
 }
