@@ -22,7 +22,7 @@ function updateTotal() {
 
 function renderTransactions() {
   transactionList.innerHTML = '';
-  transactions.forEach((transaction, index) => {
+  transactions.reverse().forEach((transaction, index) => {
     const li = document.createElement('li');
     li.className = 'transaction';
 
