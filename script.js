@@ -100,7 +100,11 @@ addTransactionButton.addEventListener('click', () => {
 });
 
 customDateRadio.addEventListener('change', () => {
-  transactionDateInput.disabled = !customDateRadio.checked;
+  transactionDateInput.classList.toggle('hidden', !customDateRadio.checked);
+});
+
+todayDateRadio.addEventListener('change', () => {
+  transactionDateInput.classList.toggle('hidden', todayDateRadio.checked);
 });
 
 renderTransactions();
