@@ -11,11 +11,17 @@
     <h1>Transaction Tracker</h1>
 
     <div class="form">
-      <input type="text" id="productName" placeholder="Product Name">
-      <input type="number" id="amount" placeholder="Amount">
-      <label>
-        <input type="checkbox" id="splitBill"> Split Bill
-      </label>
+      <div class="input-group">
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="number" id="amount" placeholder="Amount">
+      </div>
+
+      <div class="split-group">
+        <label>
+          <input type="checkbox" id="splitBill"> Split Bill
+        </label>
+      </div>
+
       <div class="date-selection">
         <label>
           <input type="radio" name="dateOption" id="todayDate" checked> Use Today's Date
@@ -23,15 +29,14 @@
         <label>
           <input type="radio" name="dateOption" id="customDate"> Select Date
         </label>
-        <input type="date" id="transactionDate" disabled>
+        <input type="date" id="transactionDate" class="hidden">
       </div>
+
       <button id="addTransaction">Add Transaction</button>
     </div>
 
     <div class="preset-buttons">
-      <button onclick="addPresetTransaction('Milk', 50)">Add Milk</button>
-      <button onclick="addPresetTransaction('Electricity Bill', 200)">Add Electricity</button>
-      <button onclick="addPresetTransaction('Groceries', 150)">Add Groceries</button>
+      <button onclick="addPresetTransaction('Milk', 33)">Add Milk</button>
     </div>
 
     <div class="transactions">
