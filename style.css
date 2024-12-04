@@ -45,6 +45,7 @@ h1 {
 
 .input-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -53,6 +54,8 @@ h1 {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
 }
 
 button {
@@ -69,24 +72,84 @@ button:hover {
   background-color: #218838;
 }
 
+button span.material-icons {
+  vertical-align: middle;
+}
+
+button.preset {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button.preset:hover {
+  background-color: #0056b3;
+}
+
+.split-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.split-group label {
+  font-size: 16px;
+}
+
+/* Date Selection */
+.date-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.date-selection input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  display: none;
+}
+
+.date-selection input[type="date"].visible {
+  display: inline-block;
+}
+
 .filters {
   margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 10px;
+  align-items: center;
 }
 
 .filters input.hidden {
   display: none;
 }
 
+/* Preset Buttons */
+.preset-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.preset-buttons button {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
 /* Transactions */
 .transactions h2 {
   margin-bottom: 10px;
+  color: #333;
 }
 
 #transactionList {
   list-style-type: none;
+  padding: 0;
 }
 
 .transaction {
@@ -131,5 +194,14 @@ button:hover {
 
   button {
     font-size: 14px;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .preset-buttons button {
+    font-size: 12px;
+    padding: 8px;
   }
 }
