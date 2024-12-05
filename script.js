@@ -71,6 +71,13 @@ function addTransaction(product, amount, split, date) {
   transactions.push(transaction);
   saveTransactions();
   renderTransactions();
+
+  productInput.value = '';
+  amountInput.value = '';
+  transactionDateInput.value = '';
+  splitBillCheckbox.checked = false; // Reset the split checkbox
+  todayDateRadio.checked = true; // Reset to today date
+  transactionDateInput.classList.add('hidden'); // Hide the date input
 }
 
 function addPresetTransaction(product, amount) {
